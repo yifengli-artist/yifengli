@@ -1,0 +1,164 @@
+/*
+ * 样式表说明
+ *
+ * 本文件定义了网站的基本外观，包括字体、颜色、布局和响应式设计。
+ * 主题采用简洁现代风格，搭配淡雅的水彩背景，以突显艺术家的个人特色。
+ */
+
+/* 基础变量与字体设置 */
+:root {
+  --primary-color: #333333;
+  --accent-color: #4a90e2;
+  --light-bg: #f7f7f7;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--primary-color);
+  line-height: 1.6;
+  background-color: white;
+  scroll-behavior: smooth;
+}
+
+/* 顶部横幅（英雄区）样式 */
+header.hero {
+  background-image: url("images/hero.png");
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+header.hero .hero-content h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+header.hero .hero-content p {
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+}
+
+/* 导航栏样式 */
+nav {
+  background-color: white;
+  border-bottom: 1px solid #eaeaea;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav li {
+  margin: 0 1.5rem;
+}
+
+nav a {
+  display: block;
+  padding: 1rem 0;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--accent-color);
+}
+
+/* 主内容区样式 */
+main {
+  padding: 2rem 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  border-bottom: 2px solid var(--accent-color);
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+section .placeholder {
+  font-style: italic;
+  color: #777;
+}
+
+/* 画廊布局 */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery figure {
+  margin: 0;
+  text-align: center;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.gallery figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+}
+
+/* 页脚样式 */
+footer {
+  background-color: var(--light-bg);
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #eaeaea;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/* 响应式设计：在较小屏幕上调整字体大小和导航栏布局 */
+@media (max-width: 768px) {
+  header.hero .hero-content h1 {
+    font-size: 2.25rem;
+  }
+  header.hero .hero-content p {
+    font-size: 1rem;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav li {
+    margin: 0.5rem 0;
+  }
+}
