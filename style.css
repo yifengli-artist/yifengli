@@ -27,7 +27,7 @@ body {
 
 /* 顶部横幅（英雄区）样式 */
 header.hero {
-  background-image: url("images/H.JPG");
+  background-image: url("images/header.JPG");
   background-size: cover;
   background-position: center;
   height: 60vh;
