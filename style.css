@@ -30,7 +30,7 @@ header.hero {
   background-image: url("images/header.JPG");
   background-size: cover;
   background-position: center;
-  height: 60vh;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,15 +40,29 @@ header.hero {
 
 header.hero .hero-content h1 {
   margin: 0;
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 header.hero .hero-content p {
   margin-top: 0.5rem;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   letter-spacing: 1px;
 }
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.25);  /* 黑色半透明遮罩 */
+}
+.hero-content {
+  position: relative; /* 确保文字在遮罩之上 */
+  color: #fff;        /* 文字改为白色，更突出 */
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.6); /* 让文字更立体 */
+}
+
 
 /* 导航栏样式 */
 nav {
