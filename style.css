@@ -51,12 +51,7 @@ header.hero .hero-content p {
   letter-spacing: 1px;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.25);  /* 黑色半透明遮罩 */
-}
+
 .hero-content {
   position: relative; /* 确保文字在遮罩之上 */
   color: #fff;        /* 文字改为白色，更突出 */
